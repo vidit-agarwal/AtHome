@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_order_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/separator_color"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.devbrain.athome.activity.OrderHistoryDetailsActivity">
+
+    <include
+        android:id="@+id/toolbar_view"
+        layout="@layout/toolbar_layout" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/five_dp"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <include layout="@layout/order_details_layout" />
+
+            <include layout="@layout/separator_layout" />
+
+            <include layout="@layout/buyer_details_layout" />
+
+            <include layout="@layout/separator_layout" />
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/tvSubTitle"
+                android:padding="@dimen/ten_dp"
+                android:text="@string/product_desc"
+                android:textColor="@color/colorPrimary" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/order_item_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include layout="@layout/separator_layout" />
+
+
+            <LinearLayout
+                android:id="@+id/bottom_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal"
+                android:padding="@dimen/ten_dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/tvSubTitle"
+                        android:text="@string/order_total"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        style="@style/tvSubTitle"
+                        android:text="@string/payment_method"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        style="@style/tvSubTitle"
+                        android:text="@string/estimated_delivery"
+                        android:textColor="@color/colorPrimary" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/grand_total"
+                        style="@style/tvSubTitle" />
+
+                    <TextView
+                        android:id="@+id/payment_Mode"
+                        style="@style/tvSubTitle" />
+
+                    <TextView
+                        android:id="@+id/estimated_delivery"
+                        style="@style/tvSubTitle" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+            <item
+                android:id="@+id/nav_current_order"
+                android:icon="@drawable/delivery_status"
+                android:title="Current Order " />
+            <item
+                android:id="@+id/nav_order_history"
+                android:icon="@drawable/daily_order"
+                android:title="Order History" />
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_term_cond"
+                android:icon="@drawable/term_cond"
+                android:title="T &amp; C" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/about"
+                android:title="About Us" />
+
+       </group>
+</menu>

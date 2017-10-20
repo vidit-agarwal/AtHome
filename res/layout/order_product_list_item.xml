@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lytMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/ten_dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/five_dp">
+
+        <TextView
+            android:id="@+id/product_name"
+            style="@style/tvSubTitle"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:gravity="left"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/product_quantity"
+            style="@style/tvSubTitle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true" />
+
+
+        <TextView
+            android:id="@+id/product_price"
+            style="@style/tvSubTitle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

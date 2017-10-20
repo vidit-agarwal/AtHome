@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_order_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <include
+        android:id="@+id/toolbar_view"
+        layout="@layout/toolbar_layout" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_layout"
+        android:layout_below="@+id/toolbar_view">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ten_dp"
+                android:background="@color/light_grey"
+                android:orientation="vertical"
+                android:padding="@dimen/ten_dp">
+
+                <TextView
+                    style="@style/tvSubTitle"
+                    android:text="Delivery Address"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/delivery_address"
+                    style="@style/tvSubTitle"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/colorGrey" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/tvSubTitle"
+                android:padding="@dimen/ten_dp"
+                android:text="@string/product_desc"
+                android:textColor="@color/colorPrimary" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/order_item_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ten_dp"
+                android:background="@color/light_grey"
+                android:orientation="vertical"
+                android:padding="@dimen/ten_dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/tvSubTitle"
+                        android:layout_weight="1"
+                        android:text="@string/order_total"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/total_amount"
+                        style="@style/tvSubTitle"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textColor="@color/colorGrey" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/tvSubTitle"
+                        android:layout_weight="1"
+                        android:text="@string/payment_method"
+                        android:textColor="@color/colorPrimary" />
+
+
+                    <TextView
+                        style="@style/tvSubTitle"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="@string/cash_on_d"
+                        android:textColor="@color/colorGrey" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_no_confirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:textColor="@color/colorWhite"
+            android:theme="@style/AppTheme.AccentButton" />
+
+        <Button
+            android:id="@+id/btn_yes_confirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="Place Order"
+            android:textColor="@color/colorWhite"
+            android:theme="@style/AppTheme.PrimaryButton" />
+
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="kg_unit">
+        <item>kg</item>
+        <item>g</item>
+    </string-array>
+
+    <string-array name="ltr_unit">
+
+        <item>l</item>
+        <item>ml</item>
+    </string-array>
+
+    <string-array name="pcs_unit">
+        <item>p</item>
+    </string-array>
+
+    <string-array name="low_amount_list">
+        <item>100</item>
+        <item>250</item>
+        <item>500</item>
+        <item>750</item>
+    </string-array>
+
+    <string-array name="high_amount_list">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="pieces_list">
+        <item>1</item>
+        <item>4</item>
+        <item>6</item>
+        <item>8</item>
+        <item>12</item>
+        <item>16</item>
+        <item>20</item>
+        <item>24</item>
+        <item>30</item>
+    </string-array>
+</resources>

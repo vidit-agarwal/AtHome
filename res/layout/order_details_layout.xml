@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/ten_dp">
+
+    <LinearLayout
+        android:id="@+id/lytMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/order_id"
+                style="@style/tvSubTitle"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/order_date"
+                style="@style/tvSubTitle" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/order_count"
+                style="@style/tvSubTitle"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/order_amount"
+                style="@style/tvSubTitle"
+                android:padding="@dimen/five_dp"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/order_status"
+        style="@style/tvSubTitle"
+        android:layout_below="@+id/lytMain"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/ten_dp"
+        android:background="@drawable/border_bg"
+        android:padding="@dimen/five_dp"
+        android:textColor="@color/colorPrimary" />
+</RelativeLayout>
